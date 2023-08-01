@@ -1,0 +1,217 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.head_container{
+  padding-left: 20px;
+  padding-top: 5px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  
+  cursor: default;
+}
+
+.title{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+
+  display: inline-block;
+}
+
+.logo{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.ui_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  
+  position: absolute;
+  top: 60px;
+  
+  opacity: 0.08;
+  transition: opacity 0.5s;
+}
+
+.ui_container:hover{
+  opacity: 1;
+  cursor: default;
+  
+  transition: opacity 0.5s;
+}
+
+.legend, .select, .menu, .edit, .info{
+  background-color: white;
+  margin: 5px;
+  margin-left: 20px;
+  padding: 10px;
+  
+  list-style: none;
+  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  font-weight: 300;
+  
+  transition: opacity 0.5s;
+  
+  box-shadow:   
+    -3px 0 0 0 black,
+    3px 0 0 0 black,
+    0 -3px 0 0 black,
+    0 3px 0 0 black;
+}
+
+.menu, .edit{
+  display: flex;
+  flex-direction: row;
+  justify-content : space-between ;
+  align-items: center;
+  
+  width: 230px;
+  padding: 18px;
+}
+
+.edit{
+  opacity: 1;
+  display: none;
+}
+
+.legend:hover, .select:hover, .menu:hover{
+
+}
+
+li{
+  color: black;
+  margin: 8px;
+  margin-bottom: 16px;
+}
+
+span{
+  display: block;
+  float: left;
+  height: 16px;
+  width: 30px;
+  margin-right: 8px;
+  margin-left: 0;
+  margin-top: 0;
+  border: 1px solid #999;
+  
+  box-shadow:   
+    -2px 0 0 0 black,
+    2px 0 0 0 black,
+    0 -2px 0 0 black,
+    0 2px 0 0 black;
+}
+
+.srch_btn, .menu_btn, .edit_btn0, .edit_btn1, .edit_btn2, .edit_btn3 {
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.05);
+  /*border-radius: 8px;*/
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  font-weight: 300;
+  
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+  box-shadow:   
+    -3px 0 0 0 black,
+    3px 0 0 0 black,
+    0 -3px 0 0 black,
+    0 3px 0 0 black;
+}
+
+.srch_btn:hover{
+  background-color: rgba(51, 51, 51, 0.25);
+}
+
+.srch_btn:active{
+  background-color: rgba(51, 51, 51, 0.35);
+  transform: translateY(3px);
+}
+
+.srch_btn:focus{
+  background-color: #47b854;
+}
+
+.menu_btn, .edit_btn0, .edit_btn1, .edit_btn2, .edit_btn3{
+  width: 40px;
+  height: 40px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit_btn0{
+  background-color: #a4df07;
+}
+
+.edit_btn1{
+  background-color: #a79776;
+}
+
+.edit_btn2{
+  background-color: #71a0c2;
+}
+
+.edit_btn3{
+  background-color: #636162;
+}
+
+.menu_btn:hover, .edit_btn0:hover, .edit_btn1:hover, .edit_btn2:hover, .edit_btn3:hover{
+  background-color: #47b854;
+}
+
+.info{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  
+  width: 450px;
+  height: 542px;
+}
+
+.info_text{
+  line-height: 2.5;
+  text-align: justify;
+}
+
+.info_img{
+  background-color: #47b854;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <div class="head_container">
+      <img class="logo" src="assets/cin_pixel.png">
+      <p class="title">Activity 3.0: Project - Autonomous Agent with Search</p>
+    </div>
+    
+    <div class="info" id="info_div">
+      <div>
+        <h2>How to play</h2>
+        <p class="info_text">In our world, there is an agent <img src="assets/agent_pixel.png" width="20"> and a piece of food <img src="assets/steak_pixel.png" width="20">. You can choose between five different search algorithms to help it find the best path towards its meal.</p> 
+        <p class="info_text"> If no food is found, another piece appear somewhere else on the map.</p>
+        <p class="info_text">It is also possible to edit the scenario as you desire <img class="info_img" src="assets/config_pixel.png" width="20">. After editing, just press <img class="info_img" src="assets/play_pixel.png" width="20"> and enjoy what you changed.</p>
+      </div>
+      <div>
+        <h3>Credits</h3>
+        <p>Jeferson Severino de Araújo (jsa2)</p>
+        <p>Lucas Nascimento Brandao (lnb)</p> 
+        <p>Matheus Julio Boncsidai de Oliveira (mjbo)</p> 
+        <p>Pedro Henrique Almeida Girao Peixinho (phagp)</p> 
+        <p>Victor Gabriel de Carvalho (vgc3)</p>
+      </div>
+      <div>
+        <img class="logo" src="assets/cin_pixel.png"> Centro de Informática - UFPE
+      </div>
+    </div>
+    
+    <div class="ui_container">
+      <ul class="legend" id="legend_div">
+        <li><span style="background:#a4df07;"></span>Grass: cost = 1</li>
+        <li><span style="background:#a79776;"></span>Swamp: cost = 5</li>
+        <li><span style="background:#71a0c2;"></span>Lake:  cost = 10</li>
+        <li><span style="background:#636162;"></span>Rocks: not passable</li>
+      </ul>
+      <ul class="select" id="select_div">
+        <li>Choose search algorithm</li>
+        <li><button class="srch_btn" id="bfs_btn">BFS</button></li>
+        <li><button class="srch_btn" id="dfs_btn">DFS</button></li>
+        <li><button class="srch_btn" id="unc_btn">Uniform Cost</button></li>
+        <li><button class="srch_btn" id="grd_btn">Greedy</button></li>
+        <li><button class="srch_btn" id="ast_btn">A*</button></li>
+      </ul>
+
+      <div class="menu">
+        <button class="menu_btn" id="reset_btn"><img class="menu_img" src="assets/reset_pixel.png"></button>
+        <button class="menu_btn" id="opt_btn" onclick="infoDiv()"><img class="menu_img" src="assets/quest_pixel.png"></button>
+        <button class="menu_btn" id="config_btn" onclick="showDiv()"><img class="menu_img" src="assets/pen_pixel.png"></button>
+        <button class="menu_btn" id="play_btn" onclick="hideDiv()"><img class="menu_img" src="assets/play_pixel.png"></button>
+      </div>
+      
+      <div class="edit" id="edit_div">
+        <button class="edit_btn" id="0_btn" onclick="editGrass()"><img class="edit_img" src="assets/grass_pixel1.png" width="30"></button>
+        <button class="edit_btn" id="1_btn" onclick="editSwamp()"><img class="edit_img" src="assets/swamp_pixel1.png" width="30"></button>
+        <button class="edit_btn" id="2_btn" onclick="editLake()"><img class="edit_img" src="assets/water_pixel2.png" width="30"></button>
+        <button class="edit_btn" id="3_btn" onclick="editRock()"><img class="edit_img" src="assets/stone_pixel1.png" width="30"></button>
+      </div>
+    </div>
+    
+    <main>
+    </main>
+    <script src="world.js"></script>
+    <script src="cell.js"></script>
+    <script src="agent.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
